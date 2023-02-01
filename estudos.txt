@@ -1,0 +1,81 @@
+<!DOCTYPE html> = informa para o navegador buscar a ultima versão do html(1,2,3,4,5..)
+<head> = informações que quero passar para o navegador.
+<body> = informações que quero exibir.
+
+Display block: o tamanho vai ser sempre 100% da pagina. 
+Display Inline: o conteudo tem o tamanho do conteudo.
+Display Inline-block: Com o tamanho do seu comteúdo, mas regulável. Não adiciona uma quebra de linha após o elemento, então o elemento pode ficar ao lado de outros elementos, alinha os elementos pela linha de baixo.
+
+Margin= espaçamentos externos.
+padding= espaçamentos internos.
+
+Obs:
+Nos links(a), as sublinhações são feitas pelo "text-decoration" no css. 
+text-transform = possibilita deixar a letra em maiusculo(uppercase) ou minusculo(lowercase).
+box-sizing: border-box = o elemento espreme o conteúdo, mantendo a largura.
+Background : url("endereco"); = Serve para utilizarmos imagens como fundo do site.
+
+pontos estáticos - pontos iniciais fixos do objeto(ex: canto superior esquerdo).
+pontos relativos - são deslocamentos em relação ao ponto inicial fixo do objeto(ex: top: 15px).
+pontos absolutos - mudam o ponto inicial,consegue colocar o objeto em qualquer lugar da página.
+pontos flutuantes(float) - permitem que os objetos fiquem ao redor. Geralmente é acompanhado da função "clear" para limpar o float. Ex: float : left; | clear : left;(no objeto que vêm após o float).
+
+Div x Section : Para um bloco onde o conteúdo tenha o mesmo significado, o mesmo sentido, usamos uma <section>. Quando o bloco for semântico.
+
+Medidas: percentual(%), pixels(px), relação à fonte padrão(em). 
+Ex: 100%, 20px , 2em(dobro da fonte padrão).
+
+Pseudo-classes de estado:
+:hover = mouse estiver em cima
+:active = quando está sendo clicado.
+:firt-child = quando tem itens com mesma classe e quero pegar o primeiro.
+:last-child = quando tem itens com mesma classe e quero pegar o último.
+:nth-child(2n) = pegar os pares.
+:first letter = pegar a primeira letra do texto.
+:first line = pegar a primeira linha do texto.
+:before = "O que vem antes", os valores são passados pelo content : " ".
+:after = "O que vem depois", os valores são passados pelo content : " ".
+
+formularios:
+temos o par label e input. Onde a label é o texto pedindo a informação e o input sendo onde insere.
+A label recebe uma etiqueta "for" com mesmo nome do "id" do input.
+<input type = "submit">: Sempre está acompanhado, pois é através dele que enviamos a informação. Para trocar o nome deste botão utilizamos o "value".
+Para criarmos uma caixa de texto onde o usuário insere uma mensagem, utilizamos o "textarea". Podendo configurar a quantidade de colunas(cols) e linhas(rows).
+Os inputs do tipo radio são acompanhado pelo "value", "name"(com mesmo nome) e seus respectivos labels.
+A tag <select></select>(seleção) são acompanhados da tag <option>(opção) para criamos itens selecionáveis.
+Para o preenchimento de um campo ser obrigatório, usamos a palavra "required" no input.
+
+Hierarquia: tag < class < id < css inline
+
+Fieldset:
+Quando temos um campo e um texto, ou vários campos referentes a alguma coisa, não usamos a tag div, usamos a tag "fieldset". Ela é referente à configuração de um ou mais campos referentes a um assunto específico. Acompanhado da tag <legend> para marcar o título de um grupo de campos do formulário.
+
+Transition: Possibilita fazer uma transição por um determinado tempo. Ele recebe transition: tempo elemento. Ex: transition : 1s background;
+Transform: Muito utilizado para animações, ele possui atributos como aumentar fonte, angulação, etc.
+Ex: transform: scale(1.2); transform : rotate(1.5 deg);
+
+Tabelas: 
+As tabelas são compostas pelas linhas(<tr>) e pelas colunas(<td>).
+Tags específica semántica: <thead> e <th>(ao invés de td) = formam o cabeçalho.
+			   <tbody> = corpo da tabela.
+			   <tfoot> = rodapé da tabela.
+Importação: 
+Fontes - google fontes, inserindo um link no header e adicionando o font-family no body.
+Mapa - google Maps, incorporando um mapa html na tag <iframe>.
+Video - Compartilhar - incorporar no <iframe>.
+
+seletores avançados: 
+elemento pai < p = pega somente o filho direto.
+elemento + p = pega o primeiro que vêm depois do elemento.
+elemento ~ p = pega todos que vêm depois.
+.classe p : not(#id ou .classe) = exclusão, pega todos aqueles que não têm o respectivo id/classe.
+
+Sombra: Recebe o box-shadow : X Y espalhamento Cor. 
+Ex: box-shadow: 5px 10px 5px black;
+Para usarmos sombra interna, utilizamos o "inset".
+Para texto utilizamos o text-shadow, com as mesmas propriedades.
+
+Responsividade: 
+Primeira coisa que temos que fazer é colocar a tag <meta name="viewport" content="width=device-width"> no head.
+Em seguida utilizamos no css os Medias Query. @media screen and (max/min-width: valor){}
+mudamos apenas o necessário.
